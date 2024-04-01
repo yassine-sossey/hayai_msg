@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "456406698581",
+    "project_id": "hayai-chat",
+    "storage_bucket": "hayai-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456406698581:android:52918a8ea4d90e7bd262dc",
+        "android_client_info": {
+          "package_name": "com.youshinedev.hayai_msg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZW_Wt_ZTxQ8ZZ6gU537SJoib0aM16VEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
