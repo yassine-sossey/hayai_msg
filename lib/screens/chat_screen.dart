@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hayai_msg/constants.dart';
+import 'package:hayai_msg/components/custom_padding.dart';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:hayai_msg/screens/chat_screen.dart';
+import 'package:hayai_msg/screens/login_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   static const String id = 'chat';
@@ -11,6 +17,16 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final _auth = FirebaseAuth.instance;
+  late final User? loggedInUser;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loggedInUser = _auth.currentUser;
+    debugPrint(loggedInUser!.email);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +37,8 @@ class _ChatScreenState extends State<ChatScreen> {
               icon: const Icon(Icons.close),
               onPressed: () {
                 //Implement logout functionality
+                _auth.signOut();
+                Navigator.pushNamed(context, LoginScreen.id);
               }),
         ],
         title: const Text('⚡️Chat'),
