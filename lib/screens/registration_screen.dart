@@ -68,6 +68,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               title: 'Register',
               callback: () async {
                 try {
+                  // ignore: unused_local_variable
                   UserCredential? newUser;
                   await FirebaseAuth.instance
                       .createUserWithEmailAndPassword(
