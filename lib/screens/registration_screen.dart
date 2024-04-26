@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hayai_msg/components/custom_padding.dart';
 import 'package:hayai_msg/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:hayai_msg/screens/chat_screen.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -81,7 +80,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     SnackBar(content: Text('error occured $e'));
                   });
                 } on Exception catch (e) {
-                  // TODO
                   debugPrint(e.toString());
                 }
               },

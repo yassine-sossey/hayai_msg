@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hayai_msg/components/custom_padding.dart';
 import 'package:hayai_msg/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:hayai_msg/screens/chat_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -10,6 +9,7 @@ class LoginScreen extends StatefulWidget {
 
   const LoginScreen({super.key});
   @override
+  // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
 
@@ -92,7 +92,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         );
                       });
                     } on Exception catch (e) {
-                      // TODO
                       debugPrint('Hey I catched this ${e.toString()}');
                     } finally {
                       setState(() {
@@ -102,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
                 if (isLoading)
-                  CircularProgressIndicator(), // Show CircularProgressIndicator if isLoading is true
+                  centerCirc, // Show CircularProgressIndicator if isLoading is true
               ],
             ),
           ],

@@ -35,3 +35,24 @@ const kInputDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
 );
+const currentuserboxDecoration = BoxDecoration(
+  color: Colors.blue,
+  borderRadius: BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(10.0),
+  ),
+);
+
+const otherusersboxDecoration = BoxDecoration(
+  color: Colors.orange,
+  borderRadius: BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(10.0),
+  ),
+);
+
+const centerCirc = Center(
+  child: CircularProgressIndicator(),
+);

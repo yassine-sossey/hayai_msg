@@ -19,7 +19,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   // late Animation curvedAnimation;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller = AnimationController(
       duration: const Duration(seconds: 1),
@@ -43,7 +42,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     controller.dispose();
   }
